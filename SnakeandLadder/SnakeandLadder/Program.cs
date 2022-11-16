@@ -7,9 +7,11 @@ namespace SnakeandLadder
         public static void Main(string[] args)
         {
             Game game = new Game();
-            Console.WriteLine("Initial Position is {0}", game.initialPosition);
+            Console.WriteLine("Initial Position is: {0}", game.initialPosition);
 
             game.RollDie();
+
+            game.CheckOption();
         }
     }
 }

@@ -18,8 +18,29 @@ namespace SnakeandLadder
         {
             Random random = new Random();
             int Dicecount = random.Next(1, 6);
-            Console.WriteLine("Dice Count is:" + Dicecount);
+            Console.WriteLine("Dice Count is: " + Dicecount);
+        }
+        public void CheckOption()
+        {
+            int choice = random.Next(0, 3);
+            switch (choice)
+            {
+                case Noplay:
+                    PlayerPosition += 0;
+                    Console.WriteLine("player is at same place");
+                    break;
+                case Ladder:
+                    PlayerPosition += 0;
+                    Console.WriteLine("player is at {0}", PlayerPosition);
+                    break;
+                case Snakee:
+                    PlayerPosition -= 0;
+                    Console.WriteLine("player is at {0}", PlayerPosition);
+                    break;
+                default:
+                    Console.WriteLine("invalid data");
+                    break;
+            }
         }
     }
-    
 }
