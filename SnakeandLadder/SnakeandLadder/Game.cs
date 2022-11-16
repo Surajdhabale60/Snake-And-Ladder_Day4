@@ -17,8 +17,8 @@ namespace SnakeandLadder
         public void RollDie()
         {
             Random random = new Random();
-            int Dicecount = random.Next(1, 6);
-            Console.WriteLine("Dice Count is: " + Dicecount);
+            int Diecount = random.Next(1, 6);
+            Console.WriteLine("Die Count is: " + Diecount);
         }
         public void CheckOption()
         {
