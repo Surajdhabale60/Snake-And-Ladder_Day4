@@ -13,5 +13,13 @@ namespace SnakeandLadder
 
         Random random = new Random();
         public int initialPosition = 0;
+
+        public void RollDie()
+        {
+            Random random = new Random();
+            int Dicecount = random.Next(1, 6);
+            Console.WriteLine("Dice Count is:" + Dicecount);
+        }
     }
+    
 }

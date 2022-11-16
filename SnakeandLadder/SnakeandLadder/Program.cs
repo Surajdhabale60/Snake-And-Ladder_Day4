@@ -8,6 +8,8 @@ namespace SnakeandLadder
         {
             Game game = new Game();
             Console.WriteLine("Initial Position is {0}", game.initialPosition);
+
+            game.RollDie();
         }
     }
 }
