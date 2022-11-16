@@ -9,7 +9,7 @@ namespace SnakeandLadder
     internal class Game
     {
         public int PlayerPosition = 0;
-        public const int Noplay = 0, Ladder = 1, Snakee = 2;
+        public const int Noplay = 0, Ladder = 1, Snake = 2;
 
         Random random = new Random();
         public int initialPosition = 0;
@@ -33,7 +33,7 @@ namespace SnakeandLadder
                     PlayerPosition += 0;
                     Console.WriteLine("player is at {0}", PlayerPosition);
                     break;
-                case Snakee:
+                case Snake:
                     PlayerPosition -= 0;
                     Console.WriteLine("player is at {0}", PlayerPosition);
                     break;
@@ -41,6 +41,42 @@ namespace SnakeandLadder
                     Console.WriteLine("invalid data");
                     break;
             }
+        }
+        public int RollDice()
+        {
+            int Dicecount = random.Next(1, 6);
+            return Dicecount;
+
+        }
+
+        public void Position()
+        {
+            int choice = random.Next(0, 3);
+            while (PlayerPosition <= 100)
+            {
+                switch (choice)
+                {
+                    case Noplay:
+                        PlayerPosition += 0;
+                        break;
+                    case Ladder:
+                        PlayerPosition += RollDice();
+                        break;
+                    case Snake:
+                        PlayerPosition -= RollDice();
+                        if (PlayerPosition < 0)
+                        {
+                            PlayerPosition = 0;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("invalid data");
+                        break;
+                }
+                Console.WriteLine(PlayerPosition);
+
+            }
+
         }
     }
 }

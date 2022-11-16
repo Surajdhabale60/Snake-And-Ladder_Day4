@@ -12,6 +12,8 @@ namespace SnakeandLadder
             game.RollDie();
 
             game.CheckOption();
+
+            game.Position();
         }
     }
 }
